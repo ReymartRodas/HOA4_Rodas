@@ -1,0 +1,12 @@
+---
+- name : Install Monitoring Tools
+  hosts: clients
+  tasks:
+    - name: Install elasticsearch
+      include_role:
+        name: elk
+
+    - name: update apt list
+      apt: 
+        update_cache: yes
+

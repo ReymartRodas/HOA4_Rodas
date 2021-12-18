@@ -1,0 +1,10 @@
+
+---
+- name: Install Monitoring Tools
+  hosts: all
+  roles:
+    - elastic_search
+    - Kibana
+    - Logstash
+
+      
