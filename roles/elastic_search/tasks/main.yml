@@ -17,14 +17,14 @@
 
 - name: Add ELK repository
   apt_repository:
-    repo: "deb https://artifacts.elastic.co/packages/oss-7.x/apt stable main"
+    repo: "deb https://artifacts.elastic.co/packages/7.x/apt stable main"
     state: present
     filename: "elasticsearch.list"
   when: ansible_distribution == "Ubuntu"
 
 - name: Install elasticsearch
   apt:
-    name: elasticsearch
+    name: elasticsearch 
     state: latest
     update_cache: yes
   when: ansible_distribution == "Ubuntu"
